@@ -26,28 +26,45 @@
 </form>
 
 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>People list:</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1">Nr.</div>
+        <div class="col-lg-4">Name:</div>
+        <div class="col-lg-3">City:</div>
+        <div class="col-lg-3">PhoneNumber:</div>
+        <div class="col-lg-1">ID:</div>
+    </div>
+    @foreach (PersonModel person in PeopleViewModel.PersonsListView)
+    {
+        <div class="row">
+            <partial name="_persons" model="person" />
+        </div>
+    }
+</div>
 
 
-<table class="tablePersons">
-    <tdead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>City</th>
-            <th>Phone</th>
-            <th> </th>
-        </tr>
-    </tdead>
-    <tbody>
-        @foreach (PersonModel person in PeopleViewModel.PersonsListView)
-        {
-        <tr>
-            <td>@person.Id</td>
-            <td>@person.Name</td>
-            <td>@person.City</td>
-            <td>@person.PhoneNr</td>
-            <td><a href="/Persons/DeletePerson?id=@person.Id">Remove</a></td>
-        </tr>
-        }
-    </tbody>
-</table>
+
+    @*<table class="tablePersons">
+            <tdead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Phone</th>
+                    <th> </th>
+                </tr>
+            </tdead>
+            <tbody>
+                @foreach (PersonModel person in PeopleViewModel.PersonsListView)
+                {
+                    <tr>
+                        <partial name="_persons" model="person" />
+                    </tr>
+                }
+            </tbody>
+        </table>*@

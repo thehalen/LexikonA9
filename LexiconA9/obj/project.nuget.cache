@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZcvE0kNTzFkbRrsG4iHZsJ3Cj/AmgK7PEmw6dGkE5h3A1is3wboKxKxpOegZgX3lCuAe/BedtIt9fjwDVo91MA==",
+  "dgSpecHash": "y8/zUxXYT4EbLiuTFXic7m6URs+7hLpNzFB8TQbytlFYB5tTRheyv4xcRjbHBMUmIXpM5D8tSYwld7j7y8/aWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Uberloek\\source\\repos\\LexiconA9\\LexiconA9\\LexiconA9.csproj",
+  "projectFilePath": "C:\\Users\\Uberloek\\source\\repos\\LexikonA9\\LexiconA9\\LexiconA9.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Uberloek\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Uberloek\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
