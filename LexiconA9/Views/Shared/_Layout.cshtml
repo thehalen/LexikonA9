@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/css/site.css">
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="https://c.tenor.com/SyDubK5fDhoAAAAC/wallbang-frustration.gif" alt="Logo" />
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="About">About</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+                <li><a asp-controller="Doctor" asp-action="FeverCheck">FeverCheck</a></li>
+                <li><a asp-controller="GuessingGame" asp-action="Index">GuessingGame</a></li>
+                <li><a asp-controller="Persons" asp-action="Index">Persons</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        © Andreas Halen @DateTime.Now.ToShortDateString()
+    </footer>
+</body>
+</html>

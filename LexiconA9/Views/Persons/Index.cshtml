@@ -1,0 +1,53 @@
+﻿@model PeopleViewModel;
+@{
+    ViewData["Title"] = "Persons";
+}
+
+<h2>Persons</h2>
+
+<form class="form" id="filter" asp-controller="Persons" asp-action="Index" method="post">
+    @Html.AntiForgeryToken()
+    <label asp-for="filterN">Name filter:</label>
+    <input asp-for="filterN" type="text" id="filterN" name="filterN" />
+    <label asp-for="filterC">City filter:</label>
+    <input asp-for="filterC" type="text" id="filterC" name="filterC" />
+    <input class="btn btn-primary" type="submit" value="Search" />
+</form>
+
+<form class="form" id="person" asp-controller="Persons" asp-action="AddPerson" method="post">
+    @Html.AntiForgeryToken()
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name" type="text" id="Name" name="Name" required />
+    <label asp-for="City">City:</label>
+    <input asp-for="City" type="text" id="City" name="City" required />
+    <label asp-for="PhoneNr">Phone:</label>
+    <input asp-for="PhoneNr" type="text" id="PhoneNr" name="PhoneNr" required />
+    <input class="btn btn-primary" type="submit" value="AddPerson" />
+</form>
+
+
+
+
+<table class="tablePersons">
+    <tdead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th> </th>
+        </tr>
+    </tdead>
+    <tbody>
+        @foreach (PersonModel person in PeopleViewModel.PersonsListView)
+        {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Name</td>
+            <td>@person.City</td>
+            <td>@person.PhoneNr</td>
+            <td><a href="/Persons/DeletePerson?id=@person.Id">Remove</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
