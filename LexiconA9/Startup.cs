@@ -63,6 +63,11 @@ namespace LexiconA9
                     pattern: "Persons",
                     defaults: new { controller = "PersonController", action = "Index" }
                     );
+                endpoints.MapControllerRoute(
+                    name: "Ajax",
+                    pattern: "{controller=Ajax}/{action=Index}/{id?}"
+                    //defaults: new { controller = "Ajax", action = "Index" }
+                    );
             });
         }
     }

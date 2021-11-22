@@ -1,0 +1,28 @@
+﻿@model List<PersonModel>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>People list:</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1">Nr.</div>
+            <div class="col-lg-4">Name:</div>
+            <div class="col-lg-3">City:</div>
+            <div class="col-lg-3">PhoneNumber:</div>
+            <div class="col-lg-1">ID:</div>
+        </div>
+        @foreach(var person in Model)
+        {
+        <div class="row">
+            <div class="col-lg-1">@person.Id</div>
+            <div class="col-lg-4">@person.Name</div>
+            <div class="col-lg-3">@person.City</div>
+            <div class="col-lg-3">@person.PhoneNr</div>
+            <div class="col-lg-1">
+                <a href="#" onclick="DeletePersonByIdRow(@person.Id)">Remove</a>
+            </div>
+        </div>
+        }
+    </div>

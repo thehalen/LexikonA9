@@ -35,8 +35,7 @@ namespace LexiconA9.Controllers
 
         public IActionResult DeletePerson(int id)
         {
-            PeopleViewModel peopleViewModel = new();
-            peopleViewModel.DeletePerson(id);
+            PeopleViewModel.DeletePerson(id);
             return RedirectToAction("Index");
         }
     }

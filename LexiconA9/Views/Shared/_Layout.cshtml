@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="~/js/PersonScript.js"></script>
 
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <header>
+    <header> 
         <nav>
             <img src="https://c.tenor.com/SyDubK5fDhoAAAAC/wallbang-frustration.gif" alt="Logo" />
             <ul>
@@ -24,6 +25,7 @@
                 <li><a asp-controller="Doctor" asp-action="FeverCheck">FeverCheck</a></li>
                 <li><a asp-controller="GuessingGame" asp-action="Index">GuessingGame</a></li>
                 <li><a asp-controller="Persons" asp-action="Index">Persons</a></li>
+                <li><a asp-controller="Ajax" asp-action="Index">Persons Ajax</a></li>
             </ul>
         </nav>
     </header>

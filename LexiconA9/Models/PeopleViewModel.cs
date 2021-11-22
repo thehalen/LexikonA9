@@ -23,7 +23,7 @@ namespace LexiconA9.Models
 				var foo = listOfPeople.Where(c => c.City == filter_C && c.Name == filter_N);
 				PeopleViewModel.personsListView.AddRange(foo);
 				return listOfPeople;
-				return PeopleViewModel.personsListView;
+				//return PeopleViewModel.personsListView;
 			}
 			set => personsListView = value;
 		}
@@ -33,6 +33,14 @@ namespace LexiconA9.Models
         public PeopleViewModel()
         {
             personsListView = new List<PersonModel>();
+        }
+
+		public static List<PersonModel> GetPersonByID(int id)
+        {
+			PeopleViewModel.personsListView.Clear();
+			PersonModel foo = listOfPeople.Find(p => p.Id == id);
+			PeopleViewModel.personsListView.Add(foo);
+			return personsListView;
         }
 
 		public void AddPerson(string name, string city, string phonenr)
@@ -45,7 +53,7 @@ namespace LexiconA9.Models
 			listOfPeople.Add(pm);
 		}
 
-		public void DeletePerson(int ind)
+		public static void DeletePerson(int ind)
 		{
 			if (ind >= 0 && ind < listOfPeople.Count)
 			{
